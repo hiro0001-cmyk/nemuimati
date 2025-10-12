@@ -1,119 +1,103 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>読書課題 (EP形式)</title>
+    <style>
+        body, html { 
+            height: 100%; 
+            margin: 0; 
+            font-family: serif; 
+        }
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 25px;
+            box-sizing: border-box;
+            font-size: 1.3em;
+            line-height: 1.9;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="ja"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;読書課題 (EP形式)&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body, html {<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: serif;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>#container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 25px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.3em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.9;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="container" onclick="showNext()"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p id="story-chunk"&gt;タップして開始&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const storyChunks = [</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"この&lt;ruby&gt;少年&lt;rt&gt;しょうねん&lt;/rt&gt;&lt;/ruby&gt;は、&lt;ruby&gt;名&lt;rt&gt;な&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;知&lt;rt&gt;し&lt;/rt&gt;&lt;/ruby&gt;られなかった。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"&lt;ruby&gt;私&lt;rt&gt;わたし&lt;/rt&gt;&lt;/ruby&gt;は&lt;ruby&gt;仮&lt;rt&gt;かり&lt;/rt&gt;&lt;/ruby&gt;にケーと&lt;ruby&gt;名&lt;rt&gt;な&lt;/rt&gt;&lt;/ruby&gt;づけておきます。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"ケーがこの&lt;ruby&gt;世界&lt;rt&gt;せかい&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;旅行&lt;rt&gt;りょこう&lt;/rt&gt;&lt;/ruby&gt;したことがありました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"ある&lt;ruby&gt;日&lt;rt&gt;ひ&lt;/rt&gt;&lt;/ruby&gt;、&lt;ruby&gt;彼&lt;rt&gt;かれ&lt;/rt&gt;&lt;/ruby&gt;は&lt;ruby&gt;不思議&lt;rt&gt;ふしぎ&lt;/rt&gt;&lt;/ruby&gt;な&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;にきました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"この&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;は「&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;い&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;」という&lt;ruby&gt;名&lt;rt&gt;な&lt;/rt&gt;&lt;/ruby&gt;がついておりました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"&lt;ruby&gt;見&lt;rt&gt;み&lt;/rt&gt;&lt;/ruby&gt;ると、なんとなく&lt;ruby&gt;活気&lt;rt&gt;かっき&lt;/rt&gt;&lt;/ruby&gt;がない。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"また&lt;ruby&gt;音&lt;rt&gt;おと&lt;/rt&gt;&lt;/ruby&gt;ひとつ&lt;ruby&gt;聞&lt;rt&gt;き&lt;/rt&gt;&lt;/ruby&gt;こえてこない&lt;ruby&gt;寂然&lt;rt&gt;しんぜん&lt;/rt&gt;&lt;/ruby&gt;とした&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;であります。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"また&lt;ruby&gt;建物&lt;rt&gt;たてもの&lt;/rt&gt;&lt;/ruby&gt;といっては、いずれも&lt;ruby&gt;古&lt;rt&gt;ふる&lt;/rt&gt;&lt;/ruby&gt;びていて、&lt;ruby&gt;壊&lt;rt&gt;こわ&lt;/rt&gt;&lt;/ruby&gt;れたところも&lt;ruby&gt;修繕&lt;rt&gt;しゅうぜん&lt;/rt&gt;&lt;/ruby&gt;するではなく、&lt;ruby&gt;烟&lt;rt&gt;けむり&lt;/rt&gt;&lt;/ruby&gt;ひとつ&lt;ruby&gt;上&lt;rt&gt;あ&lt;/rt&gt;&lt;/ruby&gt;がっているのが&lt;ruby&gt;見&lt;rt&gt;み&lt;/rt&gt;&lt;/ruby&gt;えません。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"それは&lt;ruby&gt;工場&lt;rt&gt;こうば&lt;/rt&gt;&lt;/ruby&gt;などがひとつもないからでありました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"どうしてこの&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;を「&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;い&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;」というかといいますと、だれでもこの&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;通&lt;rt&gt;とお&lt;/rt&gt;&lt;/ruby&gt;ったものは、&lt;ruby&gt;不思議&lt;rt&gt;ふしぎ&lt;/rt&gt;&lt;/ruby&gt;なことには、&lt;ruby&gt;自然&lt;rt&gt;しぜん&lt;/rt&gt;&lt;/ruby&gt;と&lt;ruby&gt;体&lt;rt&gt;からだ&lt;/rt&gt;&lt;/ruby&gt;が&lt;ruby&gt;疲&lt;rt&gt;つか&lt;/rt&gt;&lt;/ruby&gt;れてきて&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;くなるからでありました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"それで&lt;ruby&gt;日&lt;rt&gt;ひ&lt;/rt&gt;&lt;/ruby&gt;に&lt;ruby&gt;幾人&lt;rt&gt;いくにん&lt;/rt&gt;&lt;/ruby&gt;となくこの&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;通&lt;rt&gt;とお&lt;/rt&gt;&lt;/ruby&gt;る&lt;ruby&gt;旅人&lt;rt&gt;たびびと&lt;/rt&gt;&lt;/ruby&gt;が、みなこの&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;にきかかると、&lt;ruby&gt;急&lt;rt&gt;きゅう&lt;/rt&gt;&lt;/ruby&gt;に&lt;ruby&gt;体&lt;rt&gt;からだ&lt;/rt&gt;&lt;/ruby&gt;に&lt;ruby&gt;疲&lt;rt&gt;つか&lt;/rt&gt;&lt;/ruby&gt;れを&lt;ruby&gt;覚&lt;rt&gt;おぼ&lt;/rt&gt;&lt;/ruby&gt;えて&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;くなりますので、",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;はずれの&lt;ruby&gt;木&lt;rt&gt;こ&lt;/rt&gt;&lt;/ruby&gt;かげの&lt;ruby&gt;下&lt;rt&gt;した&lt;/rt&gt;&lt;/ruby&gt;や、もしくは&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;中&lt;rt&gt;なか&lt;/rt&gt;&lt;/ruby&gt;にある&lt;ruby&gt;石&lt;rt&gt;いし&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;上&lt;rt&gt;うえ&lt;/rt&gt;&lt;/ruby&gt;に&lt;ruby&gt;腰&lt;rt&gt;こし&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;下&lt;rt&gt;お&lt;/rt&gt;&lt;/ruby&gt;ろして、しばらく&lt;ruby&gt;休&lt;rt&gt;やす&lt;/rt&gt;&lt;/ruby&gt;もうといたしまするうちに、",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"まるで&lt;ruby&gt;深い&lt;rt&gt;ふかい&lt;/rt&gt;&lt;/ruby&gt;&lt;ruby&gt;淵&lt;rt&gt;ふち&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;中&lt;rt&gt;なか&lt;/rt&gt;&lt;/ruby&gt;にでも&lt;ruby&gt;引&lt;rt&gt;ひ&lt;/rt&gt;&lt;/ruby&gt;き&lt;ruby&gt;込&lt;rt&gt;こ&lt;/rt&gt;&lt;/ruby&gt;まれるように&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;くなって、つい&lt;ruby&gt;知&lt;rt&gt;し&lt;/rt&gt;&lt;/ruby&gt;らず&lt;ruby&gt;知&lt;rt&gt;し&lt;/rt&gt;&lt;/ruby&gt;らず&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;ってしまいます。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"ようやく&lt;ruby&gt;目&lt;rt&gt;め&lt;/rt&gt;&lt;/ruby&gt;がさめた&lt;ruby&gt;時分&lt;rt&gt;じぶん&lt;/rt&gt;&lt;/ruby&gt;には、もういつしか&lt;ruby&gt;日&lt;rt&gt;ひ&lt;/rt&gt;&lt;/ruby&gt;が&lt;ruby&gt;暮&lt;rt&gt;く&lt;/rt&gt;&lt;/ruby&gt;れかかっているので、&lt;ruby&gt;驚&lt;rt&gt;おどろ&lt;/rt&gt;&lt;/ruby&gt;いて&lt;ruby&gt;起&lt;rt&gt;た&lt;/rt&gt;&lt;/ruby&gt;ち&lt;ruby&gt;上&lt;rt&gt;あ&lt;/rt&gt;&lt;/ruby&gt;がって&lt;ruby&gt;道&lt;rt&gt;みち&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;急&lt;rt&gt;いそ&lt;/rt&gt;&lt;/ruby&gt;ぐのでありました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"ケーは、&lt;ruby&gt;人々&lt;rt&gt;ひとびと&lt;/rt&gt;&lt;/ruby&gt;のおそれるこの「&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;い&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;」が&lt;ruby&gt;見&lt;rt&gt;み&lt;/rt&gt;&lt;/ruby&gt;たかったのです。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"&lt;ruby&gt;己&lt;rt&gt;おれ&lt;/rt&gt;&lt;/ruby&gt;ばかりはけっして&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;くなったとて、&lt;ruby&gt;我慢&lt;rt&gt;がまん&lt;/rt&gt;&lt;/ruby&gt;をして&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;りはしないと&lt;ruby&gt;心&lt;rt&gt;こころ&lt;/rt&gt;&lt;/ruby&gt;に&lt;ruby&gt;決&lt;rt&gt;き&lt;/rt&gt;&lt;/ruby&gt;めて、&lt;ruby&gt;好奇心&lt;rt&gt;こうきしん&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;誘&lt;rt&gt;さそ&lt;/rt&gt;&lt;/ruby&gt;うままに、その「&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;い&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;」の&lt;ruby&gt;方&lt;rt&gt;ほう&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;指&lt;rt&gt;さ&lt;/rt&gt;&lt;/ruby&gt;して&lt;ruby&gt;歩&lt;rt&gt;ある&lt;/rt&gt;&lt;/ruby&gt;いてきました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"なるほどこの&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;にきてみると、それは&lt;ruby&gt;人々&lt;rt&gt;ひとびと&lt;/rt&gt;&lt;/ruby&gt;のいったように&lt;ruby&gt;気味&lt;rt&gt;きみ&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;悪&lt;rt&gt;わる&lt;/rt&gt;&lt;/ruby&gt;い&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;でありました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"どの&lt;ruby&gt;家&lt;rt&gt;いえ&lt;/rt&gt;&lt;/ruby&gt;も&lt;ruby&gt;戸&lt;rt&gt;と&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;閉&lt;rt&gt;し&lt;/rt&gt;&lt;/ruby&gt;めきっています。まるで&lt;ruby&gt;町全体&lt;rt&gt;まちぜんたい&lt;/rt&gt;&lt;/ruby&gt;が、ちょうど&lt;ruby&gt;死&lt;rt&gt;し&lt;/rt&gt;&lt;/ruby&gt;んだもののように&lt;ruby&gt;静&lt;rt&gt;しず&lt;/rt&gt;&lt;/ruby&gt;かでありました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"たまたまやせた&lt;ruby&gt;犬&lt;rt&gt;いぬ&lt;/rt&gt;&lt;/ruby&gt;が、どこからきたものか、ひょろひょろとした&lt;ruby&gt;歩&lt;rt&gt;あゆ&lt;/rt&gt;&lt;/ruby&gt;みつきで&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;中&lt;rt&gt;なか&lt;/rt&gt;&lt;/ruby&gt;をうろついているのを&lt;ruby&gt;見&lt;rt&gt;み&lt;/rt&gt;&lt;/ruby&gt;ました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"ケーはこうして、この&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;中&lt;rt&gt;なか&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;探検&lt;rt&gt;たんけん&lt;/rt&gt;&lt;/ruby&gt;していますうちに、いつともなしに&lt;ruby&gt;体&lt;rt&gt;からだ&lt;/rt&gt;&lt;/ruby&gt;が&lt;ruby&gt;疲&lt;rt&gt;つか&lt;/rt&gt;&lt;/ruby&gt;れてきました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"「ははあ、なんだか&lt;ruby&gt;疲&lt;rt&gt;つか&lt;/rt&gt;&lt;/ruby&gt;れて、&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;くなってきたぞ。ここで&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;っちゃならない。&lt;ruby&gt;我慢&lt;rt&gt;がまん&lt;/rt&gt;&lt;/ruby&gt;をしていなくちゃならない。」と、ケーは&lt;ruby&gt;独&lt;rt&gt;ひと&lt;/rt&gt;&lt;/ruby&gt;り&lt;ruby&gt;言&lt;rt&gt;ご&lt;/rt&gt;&lt;/ruby&gt;をしました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"けれど、それは、ちょうど&lt;ruby&gt;麻酔薬&lt;rt&gt;ますいやく&lt;/rt&gt;&lt;/ruby&gt;をかがされたときのように、&lt;ruby&gt;体&lt;rt&gt;からだ&lt;/rt&gt;&lt;/ruby&gt;がだんだんしびれてきました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"ケーはついに&lt;ruby&gt;我慢&lt;rt&gt;がまん&lt;/rt&gt;&lt;/ruby&gt;がしきれなくなって、そこのへいに&lt;ruby&gt;倒&lt;rt&gt;たお&lt;/rt&gt;&lt;/ruby&gt;れたまま、&lt;ruby&gt;前後&lt;rt&gt;ぜんご&lt;/rt&gt;&lt;/ruby&gt;も&lt;ruby&gt;忘&lt;rt&gt;わす&lt;/rt&gt;&lt;/ruby&gt;れて&lt;ruby&gt;高&lt;rt&gt;たか&lt;/rt&gt;&lt;/ruby&gt;いいびきをかいて&lt;ruby&gt;寝入&lt;rt&gt;ねい&lt;/rt&gt;&lt;/ruby&gt;ってしまいました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"よく&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;ったと&lt;ruby&gt;思&lt;rt&gt;おも&lt;/rt&gt;&lt;/ruby&gt;いますと、だれか&lt;ruby&gt;自分&lt;rt&gt;じぶん&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;揺&lt;rt&gt;ゆ&lt;/rt&gt;&lt;/ruby&gt;り&lt;ruby&gt;起&lt;rt&gt;お&lt;/rt&gt;&lt;/ruby&gt;こしているようでありましたから、ケーは&lt;ruby&gt;驚&lt;rt&gt;おどろ&lt;/rt&gt;&lt;/ruby&gt;いて&lt;ruby&gt;目&lt;rt&gt;め&lt;/rt&gt;&lt;/ruby&gt;をみはって&lt;ruby&gt;起&lt;rt&gt;お&lt;/rt&gt;&lt;/ruby&gt;きあがりますと、",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"いつのまにやら&lt;ruby&gt;真&lt;rt&gt;ま&lt;/rt&gt;&lt;/ruby&gt;っ&lt;ruby&gt;暗&lt;rt&gt;くら&lt;/rt&gt;&lt;/ruby&gt;く&lt;ruby&gt;暮&lt;rt&gt;く&lt;/rt&gt;&lt;/ruby&gt;れていて、あたり&lt;ruby&gt;四辺&lt;rt&gt;しへん&lt;/rt&gt;&lt;/ruby&gt;には&lt;ruby&gt;青&lt;rt&gt;あお&lt;/rt&gt;&lt;/ruby&gt;い&lt;ruby&gt;月&lt;rt&gt;つき&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;光&lt;rt&gt;ひかり&lt;/rt&gt;&lt;/ruby&gt;が&lt;ruby&gt;冷&lt;rt&gt;ひ&lt;/rt&gt;&lt;/ruby&gt;ややかに&lt;ruby&gt;彩&lt;rt&gt;いろど&lt;/rt&gt;&lt;/ruby&gt;っていました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"あたり&lt;ruby&gt;四辺&lt;rt&gt;しへん&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;見&lt;rt&gt;み&lt;/rt&gt;&lt;/ruby&gt;まわしますと、すぐ&lt;ruby&gt;自分&lt;rt&gt;じぶん&lt;/rt&gt;&lt;/ruby&gt;のそばに&lt;ruby&gt;一人&lt;rt&gt;ひとり&lt;/rt&gt;&lt;/ruby&gt;のじいさんが、&lt;ruby&gt;大&lt;rt&gt;おお&lt;/rt&gt;&lt;/ruby&gt;きな&lt;ruby&gt;袋&lt;rt&gt;ふくろ&lt;/rt&gt;&lt;/ruby&gt;をかついで&lt;ruby&gt;立&lt;rt&gt;た&lt;/rt&gt;&lt;/ruby&gt;っていました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"&lt;ruby&gt;月&lt;rt&gt;つき&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;光&lt;rt&gt;ひかり&lt;/rt&gt;&lt;/ruby&gt;で、よくそのじいさんの&lt;ruby&gt;姿&lt;rt&gt;すがた&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;見守&lt;rt&gt;みまも&lt;/rt&gt;&lt;/ruby&gt;ると、&lt;ruby&gt;破&lt;rt&gt;やぶ&lt;/rt&gt;&lt;/ruby&gt;れた&lt;ruby&gt;洋服&lt;rt&gt;ようふく&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;着&lt;rt&gt;き&lt;/rt&gt;&lt;/ruby&gt;て、&lt;ruby&gt;古&lt;rt&gt;ふる&lt;/rt&gt;&lt;/ruby&gt;くなったぼろぐつをはいていました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"「あなたはだれですか。」と、&lt;ruby&gt;少年&lt;rt&gt;しょうねん&lt;/rt&gt;&lt;/ruby&gt;は&lt;ruby&gt;声&lt;rt&gt;こえ&lt;/rt&gt;&lt;/ruby&gt;に&lt;ruby&gt;力&lt;rt&gt;ちから&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;入&lt;rt&gt;い&lt;/rt&gt;&lt;/ruby&gt;れて&lt;ruby&gt;問&lt;rt&gt;と&lt;/rt&gt;&lt;/ruby&gt;いました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"「&lt;ruby&gt;私&lt;rt&gt;わし&lt;/rt&gt;&lt;/ruby&gt;だ、おまえを&lt;ruby&gt;起&lt;rt&gt;お&lt;/rt&gt;&lt;/ruby&gt;こしたのは！ &lt;ruby&gt;私&lt;rt&gt;わし&lt;/rt&gt;&lt;/ruby&gt;はおまえに&lt;ruby&gt;頼&lt;rt&gt;たの&lt;/rt&gt;&lt;/ruby&gt;みがある。」",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"「じつは&lt;ruby&gt;私&lt;rt&gt;わし&lt;/rt&gt;&lt;/ruby&gt;がこの&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;い&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;建&lt;rt&gt;た&lt;/rt&gt;&lt;/ruby&gt;てたのだ。&lt;ruby&gt;私&lt;rt&gt;わし&lt;/rt&gt;&lt;/ruby&gt;はこの&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;主&lt;rt&gt;ぬし&lt;/rt&gt;&lt;/ruby&gt;である。」",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"「&lt;ruby&gt;僕&lt;rt&gt;ぼく&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;力&lt;rt&gt;ちから&lt;/rt&gt;&lt;/ruby&gt;でできることなら、なんでもしてあげよう。」ケーは、このじいさんに&lt;ruby&gt;誓&lt;rt&gt;ちか&lt;/rt&gt;&lt;/ruby&gt;いました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"じいさんは、この&lt;ruby&gt;少年&lt;rt&gt;しょうねん&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;言葉&lt;rt&gt;ことば&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;聞&lt;rt&gt;き&lt;/rt&gt;&lt;/ruby&gt;いて、ひじょうに&lt;ruby&gt;喜&lt;rt&gt;よろこ&lt;/rt&gt;&lt;/ruby&gt;びました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"「&lt;ruby&gt;私&lt;rt&gt;わし&lt;/rt&gt;&lt;/ruby&gt;は、この&lt;ruby&gt;世界&lt;rt&gt;せかい&lt;/rt&gt;&lt;/ruby&gt;に&lt;ruby&gt;昔&lt;rt&gt;むかし&lt;/rt&gt;&lt;/ruby&gt;から&lt;ruby&gt;住&lt;rt&gt;す&lt;/rt&gt;&lt;/ruby&gt;んでいた&lt;ruby&gt;人間&lt;rt&gt;にんげん&lt;/rt&gt;&lt;/ruby&gt;である。」",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"「けれど、どこからか&lt;ruby&gt;新&lt;rt&gt;あたら&lt;/rt&gt;&lt;/ruby&gt;しい&lt;ruby&gt;人間&lt;rt&gt;にんげん&lt;/rt&gt;&lt;/ruby&gt;がやってきて、&lt;ruby&gt;私&lt;rt&gt;わし&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;領土&lt;rt&gt;りょうど&lt;/rt&gt;&lt;/ruby&gt;をみんな&lt;ruby&gt;奪&lt;rt&gt;うば&lt;/rt&gt;&lt;/ruby&gt;ってしまった。」",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"「いまの&lt;ruby&gt;人間&lt;rt&gt;にんげん&lt;/rt&gt;&lt;/ruby&gt;はすこしの&lt;ruby&gt;休み&lt;rt&gt;やすみ&lt;/rt&gt;&lt;/ruby&gt;もなく、&lt;ruby&gt;疲&lt;rt&gt;つか&lt;/rt&gt;&lt;/ruby&gt;れということも&lt;ruby&gt;感&lt;rt&gt;かん&lt;/rt&gt;&lt;/ruby&gt;じなかったら、またたく&lt;ruby&gt;間&lt;rt&gt;ま&lt;/rt&gt;&lt;/ruby&gt;にこの&lt;ruby&gt;地球&lt;rt&gt;ちきゅう&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;上&lt;rt&gt;うえ&lt;/rt&gt;&lt;/ruby&gt;は&lt;ruby&gt;砂漠&lt;rt&gt;さばく&lt;/rt&gt;&lt;/ruby&gt;となってしまうのだ。」",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"「&lt;ruby&gt;私&lt;rt&gt;わし&lt;/rt&gt;&lt;/ruby&gt;は&lt;ruby&gt;疲労&lt;rt&gt;ひろう&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;砂漠&lt;rt&gt;さばく&lt;/rt&gt;&lt;/ruby&gt;から、&lt;ruby&gt;袋&lt;rt&gt;ふくろ&lt;/rt&gt;&lt;/ruby&gt;にその&lt;ruby&gt;疲労&lt;rt&gt;ひろう&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;砂&lt;rt&gt;すな&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;持&lt;rt&gt;も&lt;/rt&gt;&lt;/ruby&gt;ってきた。」",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"「この&lt;ruby&gt;砂&lt;rt&gt;すな&lt;/rt&gt;&lt;/ruby&gt;をすこしばかり、どんなものの&lt;ruby&gt;上&lt;rt&gt;うえ&lt;/rt&gt;&lt;/ruby&gt;にでも&lt;ruby&gt;振&lt;rt&gt;ふ&lt;/rt&gt;&lt;/ruby&gt;りかけたなら、そのものは、すぐに&lt;ruby&gt;腐&lt;rt&gt;くさ&lt;/rt&gt;&lt;/ruby&gt;れ、さび、もしくは&lt;ruby&gt;疲&lt;rt&gt;つか&lt;/rt&gt;&lt;/ruby&gt;れてしまう。」",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"「おまえにこの&lt;ruby&gt;袋&lt;rt&gt;ふくろ&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;中&lt;rt&gt;なか&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;砂&lt;rt&gt;すな&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;分&lt;rt&gt;わ&lt;/rt&gt;&lt;/ruby&gt;けてやるから、これからこの&lt;ruby&gt;世界&lt;rt&gt;せかい&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;歩&lt;rt&gt;ある&lt;/rt&gt;&lt;/ruby&gt;くところは、どこにでもすこしずつ、この&lt;ruby&gt;砂&lt;rt&gt;すな&lt;/rt&gt;&lt;/ruby&gt;をまいていってくれい。」",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"&lt;ruby&gt;少年&lt;rt&gt;しょうねん&lt;/rt&gt;&lt;/ruby&gt;は、じいさんから、&lt;ruby&gt;不思議&lt;rt&gt;ふしぎ&lt;/rt&gt;&lt;/ruby&gt;な&lt;ruby&gt;頼&lt;rt&gt;たの&lt;/rt&gt;&lt;/ruby&gt;みを&lt;ruby&gt;受&lt;rt&gt;う&lt;/rt&gt;&lt;/ruby&gt;けて、&lt;ruby&gt;袋&lt;rt&gt;ふくろ&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;持&lt;rt&gt;も&lt;/rt&gt;&lt;/ruby&gt;って、この&lt;ruby&gt;地球&lt;rt&gt;ちきゅう&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;上&lt;rt&gt;うえ&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;歩&lt;rt&gt;ある&lt;/rt&gt;&lt;/ruby&gt;きました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"ある&lt;ruby&gt;日&lt;rt&gt;ひ&lt;/rt&gt;&lt;/ruby&gt;、&lt;ruby&gt;彼&lt;rt&gt;かれ&lt;/rt&gt;&lt;/ruby&gt;はアルプス&lt;ruby&gt;山&lt;rt&gt;さん&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;中&lt;rt&gt;なか&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;歩&lt;rt&gt;ある&lt;/rt&gt;&lt;/ruby&gt;いていますと、&lt;ruby&gt;昔&lt;rt&gt;むかし&lt;/rt&gt;&lt;/ruby&gt;からの&lt;ruby&gt;大木&lt;rt&gt;たいぼく&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;切&lt;rt&gt;き&lt;/rt&gt;&lt;/ruby&gt;り&lt;ruby&gt;倒&lt;rt&gt;たお&lt;/rt&gt;&lt;/ruby&gt;し、みごとな&lt;ruby&gt;石&lt;rt&gt;いし&lt;/rt&gt;&lt;/ruby&gt;をダイナマイトで&lt;ruby&gt;打&lt;rt&gt;う&lt;/rt&gt;&lt;/ruby&gt;ち&lt;ruby&gt;砕&lt;rt&gt;くだ&lt;/rt&gt;&lt;/ruby&gt;いて、その&lt;ruby&gt;後&lt;rt&gt;あと&lt;/rt&gt;&lt;/ruby&gt;から&lt;ruby&gt;鉄道&lt;rt&gt;てつどう&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;敷&lt;rt&gt;し&lt;/rt&gt;&lt;/ruby&gt;いておりました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"そこでしょうねん&lt;ruby&gt;少年&lt;rt&gt;しょうねん&lt;/rt&gt;&lt;/ruby&gt;は、&lt;ruby&gt;袋&lt;rt&gt;ふくろ&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;中&lt;rt&gt;なか&lt;/rt&gt;&lt;/ruby&gt;から&lt;ruby&gt;砂&lt;rt&gt;すな&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;取&lt;rt&gt;と&lt;/rt&gt;&lt;/ruby&gt;り&lt;ruby&gt;出&lt;rt&gt;だ&lt;/rt&gt;&lt;/ruby&gt;して、せっかく&lt;ruby&gt;敷&lt;rt&gt;し&lt;/rt&gt;&lt;/ruby&gt;いたレールの&lt;ruby&gt;上&lt;rt&gt;うえ&lt;/rt&gt;&lt;/ruby&gt;に&lt;ruby&gt;振&lt;rt&gt;ふ&lt;/rt&gt;&lt;/ruby&gt;りかけました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"すると、&lt;ruby&gt;見&lt;rt&gt;み&lt;/rt&gt;&lt;/ruby&gt;るまに&lt;ruby&gt;ぴかぴか&lt;rt&gt;ぴかぴка&lt;/rt&gt;&lt;/ruby&gt;&lt;ruby&gt;光&lt;rt&gt;ひか&lt;/rt&gt;&lt;/ruby&gt;っていた&lt;ruby&gt;鋼鉄&lt;rt&gt;こうてつ&lt;/rt&gt;&lt;/ruby&gt;のレールは&lt;ruby&gt;真&lt;rt&gt;ま&lt;/rt&gt;&lt;/ruby&gt;っ&lt;ruby&gt;赤&lt;rt&gt;か&lt;/rt&gt;&lt;/ruby&gt;にさびたように&lt;ruby&gt;見&lt;rt&gt;み&lt;/rt&gt;&lt;/ruby&gt;えたのでありました……。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"またある&lt;ruby&gt;繁華&lt;rt&gt;はんか&lt;/rt&gt;&lt;/ruby&gt;な&lt;ruby&gt;都会&lt;rt&gt;とかい&lt;/rt&gt;&lt;/ruby&gt;をケーが&lt;ruby&gt;歩&lt;rt&gt;ある&lt;/rt&gt;&lt;/ruby&gt;いていましたときに、むこうから&lt;ruby&gt;走&lt;rt&gt;はし&lt;/rt&gt;&lt;/ruby&gt;ってきた&lt;ruby&gt;自動車&lt;rt&gt;じどうしゃ&lt;/rt&gt;&lt;/ruby&gt;が、&lt;ruby&gt;一人&lt;rt&gt;ひとり&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;小僧&lt;rt&gt;でっちこぞう&lt;/rt&gt;&lt;/ruby&gt;をはねとばして、&lt;ruby&gt;振&lt;rt&gt;ふ&lt;/rt&gt;&lt;/ruby&gt;り&lt;ruby&gt;向&lt;rt&gt;む&lt;/rt&gt;&lt;/ruby&gt;きもせず&lt;ruby&gt;行&lt;rt&gt;ゆ&lt;/rt&gt;&lt;/ruby&gt;き&lt;rt&gt;過&lt;rt&gt;す&lt;/rt&gt;&lt;/ruby&gt;ぎようとしました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"かれ&lt;ruby&gt;彼&lt;rt&gt;かれ&lt;/rt&gt;&lt;/ruby&gt;は&lt;ruby&gt;袋&lt;rt&gt;ふくろ&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;砂&lt;rt&gt;すな&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;掴&lt;rt&gt;つか&lt;/rt&gt;&lt;/ruby&gt;むが&lt;ruby&gt;早&lt;rt&gt;はや&lt;/rt&gt;&lt;/ruby&gt;いか、&lt;ruby&gt;車輪&lt;rt&gt;しゃりん&lt;/rt&gt;&lt;/ruby&gt;に&lt;ruby&gt;投&lt;rt&gt;な&lt;/rt&gt;&lt;/ruby&gt;げかけました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"またあるとき、ケーは&lt;ruby&gt;土木工事&lt;rt&gt;どぼくこうじ&lt;/rt&gt;&lt;/ruby&gt;をしているそばを&lt;ruby&gt;通&lt;rt&gt;とお&lt;/rt&gt;&lt;/ruby&gt;りかかりますと、&lt;ruby&gt;多&lt;rt&gt;おお&lt;/rt&gt;&lt;/ruby&gt;くの&lt;ruby&gt;人足&lt;rt&gt;にんそく&lt;/rt&gt;&lt;/ruby&gt;が&lt;ruby&gt;疲&lt;rt&gt;つか&lt;/rt&gt;&lt;/ruby&gt;れて&lt;ruby&gt;汗&lt;rt&gt;あせ&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;流&lt;rt&gt;なが&lt;/rt&gt;&lt;/ruby&gt;していました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"かれ&lt;ruby&gt;彼&lt;rt&gt;かれ&lt;/rt&gt;&lt;/ruby&gt;は、ごくすこしばかりの&lt;ruby&gt;砂&lt;rt&gt;すな&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;監督人&lt;rt&gt;かんとくにん&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;体&lt;rt&gt;からだ&lt;/rt&gt;&lt;/ruby&gt;にまきかけました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"ケーは、&lt;ruby&gt;汽車&lt;rt&gt;きしゃ&lt;/rt&gt;&lt;/ruby&gt;に&lt;ruby&gt;乗&lt;rt&gt;の&lt;/rt&gt;&lt;/ruby&gt;ったり、&lt;ruby&gt;汽船&lt;rt&gt;きせん&lt;/rt&gt;&lt;/ruby&gt;に&lt;ruby&gt;乗&lt;rt&gt;の&lt;/rt&gt;&lt;/ruby&gt;ったり、また&lt;ruby&gt;鉄工場&lt;rt&gt;てつこうじょう&lt;/rt&gt;&lt;/ruby&gt;にいったりして、この&lt;ruby&gt;砂&lt;rt&gt;すな&lt;/rt&gt;&lt;/ruby&gt;をいたるところでまきましたから、とうとう&lt;ruby&gt;砂&lt;rt&gt;すな&lt;/rt&gt;&lt;/ruby&gt;はなくなってしまいました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"「この&lt;ruby&gt;砂&lt;rt&gt;すな&lt;/rt&gt;&lt;/ruby&gt;がなくなったら、ふたたびこの&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;い&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;に&lt;ruby&gt;帰&lt;rt&gt;かえ&lt;/rt&gt;&lt;/ruby&gt;ってこい。すると、この&lt;ruby&gt;国&lt;rt&gt;くに&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;皇子&lt;rt&gt;おうじ&lt;/rt&gt;&lt;/ruby&gt;にしてやる。」",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"じいさんのいった&lt;ruby&gt;言葉&lt;rt&gt;ことば&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;思&lt;rt&gt;おも&lt;/rt&gt;&lt;/ruby&gt;い&lt;ruby&gt;出&lt;rt&gt;だ&lt;/rt&gt;&lt;/ruby&gt;し、&lt;ruby&gt;少年&lt;rt&gt;しょうねん&lt;/rt&gt;&lt;/ruby&gt;は、じいさんに&lt;ruby&gt;会&lt;rt&gt;あ&lt;/rt&gt;&lt;/ruby&gt;おうと&lt;ruby&gt;思&lt;rt&gt;おも&lt;/rt&gt;&lt;/ruby&gt;って、「&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;い&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;」に&lt;ruby&gt;旅出&lt;rt&gt;たびで&lt;/rt&gt;&lt;/ruby&gt;をしました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"&lt;ruby&gt;幾日&lt;rt&gt;いくにち&lt;/rt&gt;&lt;/ruby&gt;かの&lt;ruby&gt;後&lt;rt&gt;のち&lt;/rt&gt;&lt;/ruby&gt;「&lt;ruby&gt;眠&lt;rt&gt;ねむ&lt;/rt&gt;&lt;/ruby&gt;い&lt;ruby&gt;町&lt;rt&gt;まち&lt;/rt&gt;&lt;/ruby&gt;」にきました。けれども、いつのまにか&lt;ruby&gt;昔&lt;rt&gt;むかし&lt;/rt&gt;&lt;/ruby&gt;&lt;ruby&gt;見&lt;rt&gt;み&lt;/rt&gt;&lt;/ruby&gt;たような&lt;ruby&gt;灰色&lt;rt&gt;はいいろ&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;建物&lt;rt&gt;たてもの&lt;/rt&gt;&lt;/ruby&gt;は&lt;ruby&gt;跡形&lt;rt&gt;あとかた&lt;/rt&gt;&lt;/ruby&gt;もありませんでした。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"そこには&lt;ruby&gt;大&lt;rt&gt;おお&lt;/rt&gt;&lt;/ruby&gt;きな&lt;ruby&gt;建物&lt;rt&gt;たてもの&lt;/rt&gt;&lt;/ruby&gt;が&lt;ruby&gt;並&lt;rt&gt;なら&lt;/rt&gt;&lt;/ruby&gt;んで、&lt;ruby&gt;烟&lt;rt&gt;けむり&lt;/rt&gt;&lt;/ruby&gt;が&lt;ruby&gt;空&lt;rt&gt;そら&lt;/rt&gt;&lt;/ruby&gt;にみなぎっているばかりでなく、&lt;ruby&gt;鉄工場&lt;rt&gt;てつこうじょう&lt;/rt&gt;&lt;/ruby&gt;からは&lt;ruby&gt;響&lt;rt&gt;ひび&lt;/rt&gt;&lt;/ruby&gt;きが&lt;ruby&gt;起&lt;rt&gt;お&lt;/rt&gt;&lt;/ruby&gt;こってきて、",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"&lt;ruby&gt;電線&lt;rt&gt;でんせん&lt;/rt&gt;&lt;/ruby&gt;は&lt;ruby&gt;蜘蛛&lt;rt&gt;くも&lt;/rt&gt;&lt;/ruby&gt;の&lt;ruby&gt;巣&lt;rt&gt;す&lt;/rt&gt;&lt;/ruby&gt;のように&lt;ruby&gt;張&lt;rt&gt;は&lt;/rt&gt;&lt;/ruby&gt;られ、&lt;ruby&gt;電車&lt;rt&gt;でんしゃ&lt;/rt&gt;&lt;/ruby&gt;は&lt;ruby&gt;市中&lt;rt&gt;しちゅう&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;縦横&lt;rt&gt;じゅうおう&lt;/rt&gt;&lt;/ruby&gt;に&lt;ruby&gt;走&lt;rt&gt;はし&lt;/rt&gt;&lt;/ruby&gt;っていました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"この&lt;ruby&gt;有&lt;rt&gt;あ&lt;/rt&gt;&lt;/ruby&gt;り&lt;ruby&gt;様&lt;rt&gt;さま&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;見&lt;rt&gt;み&lt;/rt&gt;&lt;/ruby&gt;ると、あまりの&lt;ruby&gt;驚&lt;rt&gt;おどろ&lt;/rt&gt;&lt;/ruby&gt;きに、&lt;ruby&gt;少年&lt;rt&gt;しょうねん&lt;/rt&gt;&lt;/ruby&gt;は&lt;ruby&gt;声&lt;rt&gt;こえ&lt;/rt&gt;&lt;/ruby&gt;をたてることもできず、",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"&lt;ruby&gt;驚&lt;rt&gt;おどろ&lt;/rt&gt;&lt;/ruby&gt;きの&lt;ruby&gt;眼&lt;rt&gt;まなこ&lt;/rt&gt;&lt;/ruby&gt;をみはって、いっしょうけんめいにその&lt;ruby&gt;光景&lt;rt&gt;こうけい&lt;/rt&gt;&lt;/ruby&gt;を&lt;ruby&gt;見守&lt;rt&gt;みまも&lt;/rt&gt;&lt;/ruby&gt;っていました。",</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"【おわり】"</p>
-<p class="p1"><span class="Apple-converted-space">        </span>];</p>
-<p class="p1"><span class="Apple-converted-space">        </span>let currentIndex = 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const chunkElement = document.getElementById('story-chunk');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const containerElement = document.getElementById('container');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>function showNext() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (currentIndex &lt; storyChunks.length) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>// 'innerHTML' を使うことで、&lt;ruby&gt;タグがHTMLとして解釈される</p>
-<p class="p1"><span class="Apple-converted-space">                </span>chunkElement.innerHTML = storyChunks[currentIndex];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>currentIndex++;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <div id="container" onclick="showNext()">
+        <p id="story-chunk">タップして開始</p>
+    </div>
+
+    <script>
+        const storyChunks = [
+            "この<ruby>少年<rt>しょうねん</rt></ruby>は、<ruby>名<rt>な</rt></ruby>を<ruby>知<rt>し</rt></ruby>られなかった。",
+            "<ruby>私<rt>わたし</rt></ruby>は<ruby>仮<rt>かり</rt></ruby>にケーと<ruby>名<rt>な</rt></ruby>づけておきます。",
+            "ケーがこの<ruby>世界<rt>せかい</rt></ruby>を<ruby>旅行<rt>りょこう</rt></ruby>したことがありました。",
+            "ある<ruby>日<rt>ひ</rt></ruby>、<ruby>彼<rt>かれ</rt></ruby>は<ruby>不思議<rt>ふしぎ</rt></ruby>な<ruby>町<rt>まち</rt></ruby>にきました。",
+            "この<ruby>町<rt>まち</rt></ruby>は「<ruby>眠<rt>ねむ</rt></ruby>い<ruby>町<rt>まち</rt></ruby>」という<ruby>名<rt>な</rt></ruby>がついておりました。",
+            "<ruby>見<rt>み</rt></ruby>ると、なんとなく<ruby>活気<rt>かっき</rt></ruby>がない。",
+            "また<ruby>音<rt>おと</rt></ruby>ひとつ<ruby>聞<rt>き</rt></ruby>こえてこない<ruby>寂然<rt>しんぜん</rt></ruby>とした<ruby>町<rt>まち</rt></ruby>であります。",
+            "また<ruby>建物<rt>たてもの</rt></ruby>といっては、いずれも<ruby>古<rt>ふる</rt></ruby>びていて、<ruby>壊<rt>こわ</rt></ruby>れたところも<ruby>修繕<rt>しゅうぜん</rt></ruby>するではなく、<ruby>烟<rt>けむり</rt></ruby>ひとつ<ruby>上<rt>あ</rt></ruby>がっているのが<ruby>見<rt>み</rt></ruby>えません。",
+            "それは<ruby>工場<rt>こうば</rt></ruby>などがひとつもないからでありました。",
+            "どうしてこの<ruby>町<rt>まち</rt></ruby>を「<ruby>眠<rt>ねむ</rt></ruby>い<ruby>町<rt>まち</rt></ruby>」というかといいますと、だれでもこの<ruby>町<rt>まち</rt></ruby>を<ruby>通<rt>とお</rt></ruby>ったものは、<ruby>不思議<rt>ふしぎ</rt></ruby>なことには、<ruby>自然<rt>しぜん</rt></ruby>と<ruby>体<rt>からだ</rt></ruby>が<ruby>疲<rt>つか</rt></ruby>れてきて<ruby>眠<rt>ねむ</rt></ruby>くなるからでありました。",
+            "それで<ruby>日<rt>ひ</rt></ruby>に<ruby>幾人<rt>いくにん</rt></ruby>となくこの<ruby>町<rt>まち</rt></ruby>を<ruby>通<rt>とお</rt></ruby>る<ruby>旅人<rt>たびびと</rt></ruby>が、みなこの<ruby>町<rt>まち</rt></ruby>にきかかると、<ruby>急<rt>きゅう</rt></ruby>に<ruby>体<rt>からだ</rt></ruby>に<ruby>疲<rt>つか</rt></ruby>れを<ruby>覚<rt>おぼ</rt></ruby>えて<ruby>眠<rt>ねむ</rt></ruby>くなりますので、",
+            "<ruby>町<rt>まち</rt></ruby>はずれの<ruby>木<rt>こ</rt></ruby>かげの<ruby>下<rt>した</rt></ruby>や、もしくは<ruby>町<rt>まち</rt></ruby>の<ruby>中<rt>なか</rt></ruby>にある<ruby>石<rt>いし</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>に<ruby>腰<rt>こし</rt></ruby>を<ruby>下<rt>お</rt></ruby>ろして、しばらく<ruby>休<rt>やす</rt></ruby>もうといたしまするうちに、",
+            "まるで<ruby>深い<rt>ふかい</rt></ruby><ruby>淵<rt>ふち</rt></ruby>の<ruby>中<rt>なか</rt></ruby>にでも<ruby>引<rt>ひ</rt></ruby>き<ruby>込<rt>こ</rt></ruby>まれるように<ruby>眠<rt>ねむ</rt></ruby>くなって、つい<ruby>知<rt>し</rt></ruby>らず<ruby>知<rt>し</rt></ruby>らず<ruby>眠<rt>ねむ</rt></ruby>ってしまいます。",
+            "ようやく<ruby>目<rt>め</rt></ruby>がさめた<ruby>時分<rt>じぶん</rt></ruby>には、もういつしか<ruby>日<rt>ひ</rt></ruby>が<ruby>暮<rt>く</rt></ruby>れかかっているので、<ruby>驚<rt>おどろ</rt></ruby>いて<ruby>起<rt>た</rt></ruby>ち<ruby>上<rt>あ</rt></ruby>がって<ruby>道<rt>みち</rt></ruby>を<ruby>急<rt>いそ</rt></ruby>ぐのでありました。",
+            "ケーは、<ruby>人々<rt>ひとびと</rt></ruby>のおそれるこの「<ruby>眠<rt>ねむ</rt></ruby>い<ruby>町<rt>まち</rt></ruby>」が<ruby>見<rt>み</rt></ruby>たかったのです。",
+            "<ruby>己<rt>おれ</rt></ruby>ばかりはけっして<ruby>眠<rt>ねむ</rt></ruby>くなったとて、<ruby>我慢<rt>がまん</rt></ruby>をして<ruby>眠<rt>ねむ</rt></ruby>りはしないと<ruby>心<rt>こころ</rt></ruby>に<ruby>決<rt>き</rt></ruby>めて、<ruby>好奇心<rt>こうきしん</rt></ruby>の<ruby>誘<rt>さそ</rt></ruby>うままに、その「<ruby>眠<rt>ねむ</rt></ruby>い<ruby>町<rt>まち</rt></ruby>」の<ruby>方<rt>ほう</rt></ruby>を<ruby>指<rt>さ</rt></ruby>して<ruby>歩<rt>ある</rt></ruby>いてきました。",
+            "なるほどこの<ruby>町<rt>まち</rt></ruby>にきてみると、それは<ruby>人々<rt>ひとびと</rt></ruby>のいったように<ruby>気味<rt>きみ</rt></ruby>の<ruby>悪<rt>わる</rt></ruby>い<ruby>町<rt>まち</rt></ruby>でありました。",
+            "どの<ruby>家<rt>いえ</rt></ruby>も<ruby>戸<rt>と</rt></ruby>を<ruby>閉<rt>し</rt></ruby>めきっています。まるで<ruby>町全体<rt>まちぜんたい</rt></ruby>が、ちょうど<ruby>死<rt>し</rt></ruby>んだもののように<ruby>静<rt>しず</rt></ruby>かでありました。",
+            "たまたまやせた<ruby>犬<rt>いぬ</rt></ruby>が、どこからきたものか、ひょろひょろとした<ruby>歩<rt>あゆ</rt></ruby>みつきで<ruby>町<rt>まち</rt></ruby>の<ruby>中<rt>なか</rt></ruby>をうろついているのを<ruby>見<rt>み</rt></ruby>ました。",
+            "ケーはこうして、この<ruby>町<rt>まち</rt></ruby>の<ruby>中<rt>なか</rt></ruby>を<ruby>探検<rt>たんけん</rt></ruby>していますうちに、いつともなしに<ruby>体<rt>からだ</rt></ruby>が<ruby>疲<rt>つか</rt></ruby>れてきました。",
+            "「ははあ、なんだか<ruby>疲<rt>つか</rt></ruby>れて、<ruby>眠<rt>ねむ</rt></ruby>くなってきたぞ。ここで<ruby>眠<rt>ねむ</rt></ruby>っちゃならない。<ruby>我慢<rt>がまん</rt></ruby>をしていなくちゃならない。」と、ケーは<ruby>独<rt>ひと</rt></ruby>り<ruby>言<rt>ご</rt></ruby>をしました。",
+            "けれど、それは、ちょうど<ruby>麻酔薬<rt>ますいやく</rt></ruby>をかがされたときのように、<ruby>体<rt>からだ</rt></ruby>がだんだんしびれてきました。",
+            "ケーはついに<ruby>我慢<rt>がまん</rt></ruby>がしきれなくなって、そこのへいに<ruby>倒<rt>たお</rt></ruby>れたまま、<ruby>前後<rt>ぜんご</rt></ruby>も<ruby>忘<rt>わす</rt></ruby>れて<ruby>高<rt>たか</rt></ruby>いいびきをかいて<ruby>寝入<rt>ねい</rt></ruby>ってしまいました。",
+            "よく<ruby>眠<rt>ねむ</rt></ruby>ったと<ruby>思<rt>おも</rt></ruby>いますと、だれか<ruby>自分<rt>じぶん</rt></ruby>を<ruby>揺<rt>ゆ</rt></ruby>り<ruby>起<rt>お</rt></ruby>こしているようでありましたから、ケーは<ruby>驚<rt>おどろ</rt></ruby>いて<ruby>目<rt>め</rt></ruby>をみはって<ruby>起<rt>お</rt></ruby>きあがりますと、",
+            "いつのまにやら<ruby>真<rt>ま</rt></ruby>っ<ruby>暗<rt>くら</rt></ruby>く<ruby>暮<rt>く</rt></ruby>れていて、あたり<ruby>四辺<rt>しへん</rt></ruby>には<ruby>青<rt>あお</rt></ruby>い<ruby>月<rt>つき</rt></ruby>の<ruby>光<rt>ひかり</rt></ruby>が<ruby>冷<rt>ひ</rt></ruby>ややかに<ruby>彩<rt>いろど</rt></ruby>っていました。",
+            "あたり<ruby>四辺<rt>しへん</rt></ruby>を<ruby>見<rt>み</rt></ruby>まわしますと、すぐ<ruby>自分<rt>じぶん</rt></ruby>のそばに<ruby>一人<rt>ひとり</rt></ruby>のじいさんが、<ruby>大<rt>おお</rt></ruby>きな<ruby>袋<rt>ふくろ</rt></ruby>をかついで<ruby>立<rt>た</rt></ruby>っていました。",
+            "<ruby>月<rt>つき</rt></ruby>の<ruby>光<rt>ひかり</rt></ruby>で、よくそのじいさんの<ruby>姿<rt>すがた</rt></ruby>を<ruby>見守<rt>みまも</rt></ruby>ると、<ruby>破<rt>やぶ</rt></ruby>れた<ruby>洋服<rt>ようふく</rt></ruby>を<ruby>着<rt>き</rt></ruby>て、<ruby>古<rt>ふる</rt></ruby>くなったぼろぐつをはいていました。",
+            "「あなたはだれですか。」と、<ruby>少年<rt>しょうねん</rt></ruby>は<ruby>声<rt>こえ</rt></ruby>に<ruby>力<rt>ちから</rt></ruby>を<ruby>入<rt>い</rt></ruby>れて<ruby>問<rt>と</rt></ruby>いました。",
+            "「<ruby>私<rt>わし</rt></ruby>だ、おまえを<ruby>起<rt>お</rt></ruby>こしたのは！ <ruby>私<rt>わし</rt></ruby>はおまえに<ruby>頼<rt>たの</rt></ruby>みがある。」",
+            "「じつは<ruby>私<rt>わし</rt></ruby>がこの<ruby>眠<rt>ねむ</rt></ruby>い<ruby>町<rt>まち</rt></ruby>を<ruby>建<rt>た</rt></ruby>てたのだ。<ruby>私<rt>わし</rt></ruby>はこの<ruby>町<rt>まち</rt></ruby>の<ruby>主<rt>ぬし</rt></ruby>である。」",
+            "「<ruby>僕<rt>ぼく</rt></ruby>の<ruby>力<rt>ちから</rt></ruby>でできることなら、なんでもしてあげよう。」ケーは、このじいさんに<ruby>誓<rt>ちか</rt></ruby>いました。",
+            "じいさんは、この<ruby>少年<rt>しょうねん</rt></ruby>の<ruby>言葉<rt>ことば</rt></ruby>を<ruby>聞<rt>き</rt></ruby>いて、ひじょうに<ruby>喜<rt>よろこ</rt></ruby>びました。",
+            "「<ruby>私<rt>わし</rt></ruby>は、この<ruby>世界<rt>せかい</rt></ruby>に<ruby>昔<rt>むかし</rt></ruby>から<ruby>住<rt>す</rt></ruby>んでいた<ruby>人間<rt>にんげん</rt></ruby>である。」",
+            "「けれど、どこからか<ruby>新<rt>あたら</rt></ruby>しい<ruby>人間<rt>にんげん</rt></ruby>がやってきて、<ruby>私<rt>わし</rt></ruby>の<ruby>領土<rt>りょうど</rt></ruby>をみんな<ruby>奪<rt>うば</rt></ruby>ってしまった。」",
+            "「いまの<ruby>人間<rt>にんげん</rt></ruby>はすこしの<ruby>休み<rt>やすみ</rt></ruby>もなく、<ruby>疲<rt>つか</rt></ruby>れということも<ruby>感<rt>かん</rt></ruby>じなかったら、またたく<ruby>間<rt>ま</rt></ruby>にこの<ruby>地球<rt>ちきゅう</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>は<ruby>砂漠<rt>さばく</rt></ruby>となってしまうのだ。」",
+            "「<ruby>私<rt>わし</rt></ruby>は<ruby>疲労<rt>ひろう</rt></ruby>の<ruby>砂漠<rt>さばく</rt></ruby>から、<ruby>袋<rt>ふくろ</rt></ruby>にその<ruby>疲労<rt>ひろう</rt></ruby>の<ruby>砂<rt>すな</rt></ruby>を<ruby>持<rt>も</rt></ruby>ってきた。」",
+            "「この<ruby>砂<rt>すな</rt></ruby>をすこしばかり、どんなものの<ruby>上<rt>うえ</rt></ruby>にでも<ruby>振<rt>ふ</rt></ruby>りかけたなら、そのものは、すぐに<ruby>腐<rt>くさ</rt></ruby>れ、さび、もしくは<ruby>疲<rt>つか</rt></ruby>れてしまう。」",
+            "「おまえにこの<ruby>袋<rt>ふくろ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>の<ruby>砂<rt>すな</rt></ruby>を<ruby>分<rt>わ</rt></ruby>けてやるから、これからこの<ruby>世界<rt>せかい</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>くところは、どこにでもすこしずつ、この<ruby>砂<rt>すな</rt></ruby>をまいていってくれい。」",
+            "<ruby>少年<rt>しょうねん</rt></ruby>は、じいさんから、<ruby>不思議<rt>ふしぎ</rt></ruby>な<ruby>頼<rt>たの</rt></ruby>みを<ruby>受<rt>う</rt></ruby>けて、<ruby>袋<rt>ふくろ</rt></ruby>を<ruby>持<rt>も</rt></ruby>って、この<ruby>地球<rt>ちきゅう</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>きました。",
+            "ある<ruby>日<rt>ひ</rt></ruby>、<ruby>彼<rt>かれ</rt></ruby>はアルプス<ruby>山<rt>さん</rt></ruby>の<ruby>中<rt>なか</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>いていますと、<ruby>昔<rt>むかし</rt></ruby>からの<ruby>大木<rt>たいぼく</rt></ruby>を<ruby>切<rt>き</rt></ruby>り<ruby>倒<rt>たお</rt></ruby>し、みごとな<ruby>石<rt>いし</rt></ruby>をダイナマイトで<ruby>打<rt>う</rt></ruby>ち<ruby>砕<rt>くだ</rt></ruby>いて、その<ruby>後<rt>あと</rt></ruby>から<ruby>鉄道<rt>てつどう</rt></ruby>を<ruby>敷<rt>し</rt></ruby>いておりました。",
+            "そこでしょうねん<ruby>少年<rt>しょうねん</rt></ruby>は、<ruby>袋<rt>ふくろ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>から<ruby>砂<rt>すな</rt></ruby>を<ruby>取<rt>と</rt></ruby>り<ruby>出<rt>だ</rt></ruby>して、せっかく<ruby>敷<rt>し</rt></ruby>いたレールの<ruby>上<rt>うえ</rt></ruby>に<ruby>振<rt>ふ</rt></ruby>りかけました。",
+            "すると、<ruby>見<rt>み</rt></ruby>るまに<ruby>ぴかぴか<rt>ぴかぴか</rt></ruby><ruby>光<rt>ひか</rt></ruby>っていた<ruby>鋼鉄<rt>こうてつ</rt></ruby>のレールは<ruby>真<rt>ま</rt></ruby>っ<ruby>赤<rt>か</rt></ruby>にさびたように<ruby>見<rt>み</rt></ruby>えたのでありました……。",
+            "またある<ruby>繁華<rt>はんか</rt></ruby>な<ruby>都会<rt>とかい</rt></ruby>をケーが<ruby>歩<rt>ある</rt></ruby>いていましたときに、むこうから<ruby>走<rt>はし</rt></ruby>ってきた<ruby>自動車<rt>じどうしゃ</rt></ruby>が、<ruby>一人<rt>ひとり</rt></ruby>の<ruby>小僧<rt>でっちこぞう</rt></ruby>をはねとばして、<ruby>振<rt>ふ</rt></ruby>り<ruby>向<rt>む</rt></ruby>きもせず<ruby>行<rt>ゆ</rt></ruby>き<ruby>過<rt>す</rt></ruby>ぎようとしました。",
+            "<ruby>彼<rt>かれ</rt></ruby>は<ruby>袋<rt>ふくろ</rt></ruby>の<ruby>砂<rt>すな</rt></ruby>を<ruby>掴<rt>つか</rt></ruby>むが<ruby>早<rt>はや</rt></ruby>いか、<ruby>車輪<rt>しゃりん</rt></ruby>に<ruby>投<rt>な</rt></ruby>げかけました。",
+            "またあるとき、ケーは<ruby>土木工事<rt>どぼくこうじ</rt></ruby>をしているそばを<ruby>通<rt>とお</rt></ruby>りかかりますと、<ruby>多<rt>おお</rt></ruby>くの<ruby>人足<rt>にんそく</rt></ruby>が<ruby>疲<rt>つか</rt></ruby>れて<ruby>汗<rt>あせ</rt></ruby>を<ruby>流<rt>なが</rt></ruby>していました。",
+            "<ruby>彼<rt>かれ</rt></ruby>は、ごくすこしばかりの<ruby>砂<rt>すな</rt></ruby>を<ruby>監督人<rt>かんとくにん</rt></ruby>の<ruby>体<rt>からだ</rt></ruby>にまきかけました。",
+            "ケーは、<ruby>汽車<rt>きしゃ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>ったり、<ruby>汽船<rt>きせん</rt></ruby>に<ruby>乗<rt>の</rt></ruby>ったり、また<ruby>鉄工場<rt>てつこうじょう</rt></ruby>にいったりして、この<ruby>砂<rt>すな</rt></ruby>をいたるところでまきましたから、とうとう<ruby>砂<rt>すな</rt></ruby>はなくなってしまいました。",
+            "「この<ruby>砂<rt>すな</rt></ruby>がなくなったら、ふたたびこの<ruby>眠<rt>ねむ</rt></ruby>い<ruby>町<rt>まち</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>ってこい。すると、この<ruby>国<rt>くに</rt></ruby>の<ruby>皇子<rt>おうじ</rt></ruby>にしてやる。」",
+            "じいさんのいった<ruby>言葉<rt>ことば</rt></ruby>を<ruby>思<rt>おも</rt></ruby>い<ruby>出<rt>だ</rt></ruby>し、<ruby>少年<rt>しょうねん</rt></ruby>は、じいさんに<ruby>会<rt>あ</rt></ruby>おうと<ruby>思<rt>おも</rt></ruby>って、「<ruby>眠<rt>ねむ</rt></ruby>い<ruby>町<rt>まち</rt></ruby>」に<ruby>旅出<rt>たびで</rt></ruby>をしました。",
+            "<ruby>幾日<rt>いくにち</rt></ruby>かの<ruby>後<rt>のち</rt></ruby>「<ruby>眠<rt>ねむ</rt></ruby>い<ruby>町<rt>まち</rt></ruby>」にきました。けれども、いつのまにか<ruby>昔<rt>むかし</rt></ruby><ruby>見<rt>み</rt></ruby>たような<ruby>灰色<rt>はいいろ</rt></ruby>の<ruby>建物<rt>たてもの</rt></ruby>は<ruby>跡形<rt>あとかた</rt></ruby>もありませんでした。",
+            "そこには<ruby>大<rt>おお</rt></ruby>きな<ruby>建物<rt>たてもの</rt></ruby>が<ruby>並<rt>なら</rt></ruby>んで、<ruby>烟<rt>けむり</rt></ruby>が<ruby>空<rt>そら</rt></ruby>にみなぎっているばかりでなく、<ruby>鉄工場<rt>てつこうじょう</rt></ruby>からは<ruby>響<rt>ひび</rt></ruby>きが<ruby>起<rt>お</rt></ruby>こってきて、",
+            "<ruby>電線<rt>でんせん</rt></ruby>は<ruby>蜘蛛<rt>くも</rt></ruby>の<ruby>巣<rt>す</rt></ruby>のように<ruby>張<rt>は</rt></ruby>られ、<ruby>電車<rt>でんしゃ</rt></ruby>は<ruby>市中<rt>しちゅう</rt></ruby>を<ruby>縦横<rt>じゅうおう</rt></ruby>に<ruby>走<rt>はし</rt></ruby>っていました。",
+            "この<ruby>有<rt>あ</rt></ruby>り<ruby>様<rt>さま</rt></ruby>を<ruby>見<rt>み</rt></ruby>ると、あまりの<ruby>驚<rt>おどろ</rt></ruby>きに、<ruby>少年<rt>しょうねん</rt></ruby>は<ruby>声<rt>こえ</rt></ruby>をたてることもできず、",
+            "<ruby>驚<rt>おどろ</rt></ruby>きの<ruby>眼<rt>まなこ</rt></ruby>をみはって、いっしょうけんめいにその<ruby>光景<rt>こうけい</rt></ruby>を<ruby>見守<rt>みまも</rt></ruby>っていました。",
+            "【おわり】"
+        ];
+        let currentIndex = 0;
+        const chunkElement = document.getElementById('story-chunk');
+        const containerElement = document.getElementById('container');
+
+        function showNext() {
+            if (currentIndex < storyChunks.length) {
+                // 'innerHTML' を使うことで、<ruby>タグがHTMLとして解釈される
+                chunkElement.innerHTML = storyChunks[currentIndex];
+                currentIndex++;
+            }
+        }
+    </script>
 </body>
 </html>
